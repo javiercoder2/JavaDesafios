@@ -24,13 +24,17 @@ public static void main(String []args) {
     String genero = leer.readLine("Ingrese su género");
     // Se puede usar char pero tuve problematicas  con la entrega de info por parte de Java
 
+    LocalDate anioActual = LocalDate.now();
+    DateTimeFormatter formato = DateTimeFormatter.ofPattern("YYYY");
+    String anioFormatter = anioActual.format(formato);
 
 System.out.println("Su nombre es: " + nombre +
 "Su nacionalidad es" + nacionalidad +
 "Su tipo de sangre es :" + sangre+
 "su preferencia laboral es : " + preferenciaLaboral+
 "Su edad es : " + edadInt+
-"Su género es :" + genero);
+"Su género es :" + genero+
+"Su género es :" + (Integer.parseInt(sangreanioFormatter) - edad));
 
 
     }
